@@ -1,6 +1,6 @@
 What is grooid-wpapi
 --------------------------------------
 
-You've just created a basic Android-Groovy library. It provides a standard project structure and
-a basic Gradle plugin. Now is up to you to add your source files and edit them with Android Studio
-and have fun :)
+Grooid-WPAPI is an Android-Groovy library to connect to a Wordpress REST API provided by [WP Rest API](http://wp-api.org) plugin. 
+
+It is still a work in progress. 
