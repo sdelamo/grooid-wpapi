@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'groovyx.grooid.groovy-android'
+
+android {
+
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    // Android tools
+    compile 'com.android.support:support-v4:22.0.0'
+    // Groovy version
+    compile 'org.codehaus.groovy:groovy:2.4.3:grooid'
+    // Groovy Json handling
+    compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
+        transitive = false
+    }
+
+    compile 'com.mcxiaoke.volley:library:1.0.16'
+
+    testCompile group:'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+}
